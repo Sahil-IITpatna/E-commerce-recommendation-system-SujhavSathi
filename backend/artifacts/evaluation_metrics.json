@@ -1,0 +1,42 @@
+{
+    "methodology": "Proxy-based catalogue evaluation utilizing hierarchical category trees, brand affinity, and price-tier alignment as weak ground-truth relevance labels.",
+    "dataset_sample_size": 300,
+    "metrics": [
+        {
+            "model": "Catalogue Ranking",
+            "precision@5": 1.0,
+            "precision@10": 0.999,
+            "recall@5": 1.0,
+            "recall@10": 0.999,
+            "ndcg@5": 0.7687,
+            "ndcg@10": 0.8892
+        },
+        {
+            "model": "Content-Based",
+            "precision@5": 0.972,
+            "precision@10": 0.9643,
+            "recall@5": 0.972,
+            "recall@10": 0.9643,
+            "ndcg@5": 0.9328,
+            "ndcg@10": 0.9656
+        },
+        {
+            "model": "Category & Brand",
+            "precision@5": 1.0,
+            "precision@10": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "ndcg@5": 1.0,
+            "ndcg@10": 1.0
+        },
+        {
+            "model": "Hybrid Recommender",
+            "precision@5": 0.9807,
+            "precision@10": 0.9763,
+            "recall@5": 0.9807,
+            "recall@10": 0.9763,
+            "ndcg@5": 0.9634,
+            "ndcg@10": 0.9831
+        }
+    ]
+}

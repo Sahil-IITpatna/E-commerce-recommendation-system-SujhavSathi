@@ -1,0 +1,150 @@
+{
+  "info": {
+    "name": "SujhavSathi Flipkart Recommendation API",
+    "_postman_id": "sujhavsathi-flipkart-api-v1",
+    "description": "Postman API Collection for Sujhav साथी Flipkart Product Recommendation Platform",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "System Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/api/health", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "health"] }
+      }
+    },
+    {
+      "name": "Dashboard & KPIs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/api/dashboard", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "dashboard"] }
+      }
+    },
+    {
+      "name": "Get Products (Paginated & Filtered)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products?page=1&limit=12&category=Clothing&price_range=Budget",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "12" },
+            { "key": "category", "value": "Clothing" },
+            { "key": "price_range", "value": "Budget" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Product By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/api/products/c2d766ca982eca8304150849735ffef9", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "products", "c2d766ca982eca8304150849735ffef9"] }
+      }
+    },
+    {
+      "name": "Search Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products/search?q=Alisha&limit=5",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products", "search"],
+          "query": [
+            { "key": "q", "value": "Alisha" },
+            { "key": "limit", "value": "5" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Catalogue Popular Recommendations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recommendations/popular?limit=10&category=Clothing",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recommendations", "popular"],
+          "query": [
+            { "key": "limit", "value": "10" },
+            { "key": "category", "value": "Clothing" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Content-Based Recommendations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/api/recommendations/content/c2d766ca982eca8304150849735ffef9?limit=10", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "recommendations", "content", "c2d766ca982eca8304150849735ffef9"], "query": [{ "key": "limit", "value": "10" }] }
+      }
+    },
+    {
+      "name": "Category & Brand Recommendations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/api/recommendations/category/c2d766ca982eca8304150849735ffef9?limit=10", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "recommendations", "category", "c2d766ca982eca8304150849735ffef9"], "query": [{ "key": "limit", "value": "10" }] }
+      }
+    },
+    {
+      "name": "Weighted Hybrid Recommendations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recommendations/hybrid/c2d766ca982eca8304150849735ffef9?limit=10&w_content=0.60&w_category_brand=0.25&w_catalogue=0.15",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recommendations", "hybrid", "c2d766ca982eca8304150849735ffef9"],
+          "query": [
+            { "key": "limit", "value": "10" },
+            { "key": "w_content", "value": "0.60" },
+            { "key": "w_category_brand", "value": "0.25" },
+            { "key": "w_catalogue", "value": "0.15" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Categories Directory",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/api/categories", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "categories"] }
+      }
+    },
+    {
+      "name": "Brands Directory",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/api/brands", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "brands"] }
+      }
+    },
+    {
+      "name": "Model Evaluation Metrics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/api/model/evaluation", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api", "model", "evaluation"] }
+      }
+    }
+  ]
+}

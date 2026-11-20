@@ -1,0 +1,17 @@
+{
+    "total_raw_rows": 20000,
+    "cleaned_rows": 17665,
+    "deduplicated_removed": 2257,
+    "unique_categories": 262,
+    "unique_brands": 4565,
+    "avg_retail_price": 3171.67,
+    "avg_discounted_price": 2126.32,
+    "avg_discount_percentage": 39.69,
+    "median_discount_percentage": 44.44,
+    "budget_products": 8317,
+    "mid_range_products": 7485,
+    "premium_products": 1863,
+    "avg_completeness_score": 99.12,
+    "rated_products_count": 1727,
+    "rated_products_pct": 9.78
+}
